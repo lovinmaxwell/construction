@@ -10,7 +10,7 @@ setup(
 	name='construction',
 	version=version,
 	description='Module for Construction Companies',
-	author='ETS',
+	author='Lovin Maxwell',
 	author_email='lovin@etsqatar.net',
 	packages=find_packages(),
 	zip_safe=False,
