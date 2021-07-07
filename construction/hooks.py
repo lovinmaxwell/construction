@@ -9,6 +9,7 @@ app_color = "grey"
 app_email = "lovin@etsqatar.net"
 app_license = "MIT"
 app_logo_url = '/assets/frappe/images/frappe-framework-logo.svg'
+fixtures = ["Custom Field", "Custom Script"]
 
 # Includes in <head>
 # ------------------
@@ -30,7 +31,9 @@ app_logo_url = '/assets/frappe/images/frappe-framework-logo.svg'
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
-
+doctype_js = {
+    "Purchase Order" : "construction/buying/doctype/purchase_order/purchase_order.js"
+    }
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
@@ -106,6 +109,12 @@ app_logo_url = '/assets/frappe/images/frappe-framework-logo.svg'
 # 		"on_trash": "method"
 #	}
 # }
+
+doc_events = {
+	"Purchase Order": {
+		"validate": "construction.construction.buying.doctype.purchase_order.purchase_order.validate",
+	}
+}
 
 # Scheduled Tasks
 # ---------------
@@ -183,3 +192,5 @@ app_logo_url = '/assets/frappe/images/frappe-framework-logo.svg'
 # 	"construction.auth.validate"
 # ]
 
+
+clear_cache = "app.cache.clear_cache"

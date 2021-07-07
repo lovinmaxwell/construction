@@ -5,7 +5,7 @@ import frappe
 def execute():
     # add Counstruction
     con = frappe.db.sql("""SELECT name FROM `tabDomain` WHERE upper(name) = upper('Construction')""", as_list=1)
-    if con:
+    if len(con) == 0:
         frappe.get_doc(dict(
 			doctype='Domain',
 			name='Construction',
