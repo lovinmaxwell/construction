@@ -1,6 +1,6 @@
 ## Construction
 
-Module for Construction Companies
+Construction App for ETS
 
 #### License
 

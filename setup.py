@@ -3,13 +3,13 @@ from setuptools import setup, find_packages
 with open('requirements.txt') as f:
 	install_requires = f.read().strip().split('\n')
 
-# get version from __version__ variable in construction/__init__.py
-from construction import __version__ as version
+# get version from __version__ variable in ets/__init__.py
+from ets import __version__ as version
 
 setup(
-	name='construction',
+	name='ets',
 	version=version,
-	description='Module for Construction Companies',
+	description='Construction App for ETS',
 	author='Lovin Maxwell',
 	author_email='lovin@etsqatar.net',
 	packages=find_packages(),

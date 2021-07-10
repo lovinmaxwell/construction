@@ -1,29 +1,27 @@
 from . import __version__ as app_version
 
-app_name = "construction"
+app_name = "ets"
 app_title = "Construction"
-app_publisher = "ETS"
-app_description = "Module for Construction Companies"
+app_publisher = "Lovin Maxwell"
+app_description = "Construction App for ETS"
 app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "lovin@etsqatar.net"
 app_license = "MIT"
-app_logo_url = '/assets/frappe/images/frappe-framework-logo.svg'
 fixtures = ["Custom Field", "Custom Script"]
-
 # Includes in <head>
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/construction/css/construction.css"
-# app_include_js = "/assets/construction/js/construction.js"
+# app_include_css = "/assets/ets/css/ets.css"
+# app_include_js = "/assets/ets/js/ets.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/construction/css/construction.css"
-# web_include_js = "/assets/construction/js/construction.js"
+# web_include_css = "/assets/ets/css/ets.css"
+# web_include_js = "/assets/ets/js/ets.js"
 
 # include custom scss in every website theme (without file extension ".scss")
-# website_theme_scss = "construction/public/scss/website"
+# website_theme_scss = "ets/public/scss/website"
 
 # include js, css files in header of web form
 # webform_include_js = {"doctype": "public/js/doctype.js"}
@@ -31,9 +29,11 @@ fixtures = ["Custom Field", "Custom Script"]
 
 # include js in page
 # page_js = {"page" : "public/js/file.js"}
+
 doctype_js = {
-    "Purchase Order" : "construction/buying/doctype/purchase_order/purchase_order.js"
+    "Purchase Order" : "public/js/buying/purchase/purchase_order.js"
     }
+
 # include js in doctype views
 # doctype_js = {"doctype" : "public/js/doctype.js"}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
@@ -62,21 +62,21 @@ doctype_js = {
 
 # add methods and filters to jinja environment
 # jinja = {
-# 	"methods": "construction.utils.jinja_methods",
-# 	"filters": "construction.utils.jinja_filters"
+# 	"methods": "ets.utils.jinja_methods",
+# 	"filters": "ets.utils.jinja_filters"
 # }
 
 # Installation
 # ------------
 
-# before_install = "construction.install.before_install"
-# after_install = "construction.install.after_install"
+# before_install = "ets.install.before_install"
+# after_install = "ets.install.after_install"
 
 # Desk Notifications
 # ------------------
 # See frappe.core.notifications.get_notification_config
 
-# notification_config = "construction.notifications.get_notification_config"
+# notification_config = "ets.notifications.get_notification_config"
 
 # Permissions
 # -----------
@@ -110,50 +110,44 @@ doctype_js = {
 #	}
 # }
 
-doc_events = {
-	"Purchase Order": {
-		"validate": "construction.construction.buying.doctype.purchase_order.purchase_order.validate",
-	}
-}
-
 # Scheduled Tasks
 # ---------------
 
 # scheduler_events = {
 # 	"all": [
-# 		"construction.tasks.all"
+# 		"ets.tasks.all"
 # 	],
 # 	"daily": [
-# 		"construction.tasks.daily"
+# 		"ets.tasks.daily"
 # 	],
 # 	"hourly": [
-# 		"construction.tasks.hourly"
+# 		"ets.tasks.hourly"
 # 	],
 # 	"weekly": [
-# 		"construction.tasks.weekly"
+# 		"ets.tasks.weekly"
 # 	],
 # 	"monthly": [
-# 		"construction.tasks.monthly"
+# 		"ets.tasks.monthly"
 # 	],
 # }
 
 # Testing
 # -------
 
-# before_tests = "construction.install.before_tests"
+# before_tests = "ets.install.before_tests"
 
 # Overriding Methods
 # ------------------------------
 #
 # override_whitelisted_methods = {
-# 	"frappe.desk.doctype.event.event.get_events": "construction.event.get_events"
+# 	"frappe.desk.doctype.event.event.get_events": "ets.event.get_events"
 # }
 #
 # each overriding function accepts a `data` argument;
 # generated from the base implementation of the doctype dashboard,
 # along with any modifications made in other Frappe apps
 # override_doctype_dashboards = {
-# 	"Task": "construction.task.get_dashboard_data"
+# 	"Task": "ets.task.get_dashboard_data"
 # }
 
 # exempt linked doctypes from being automatically cancelled
@@ -189,8 +183,6 @@ doc_events = {
 # --------------------------------
 
 # auth_hooks = [
-# 	"construction.auth.validate"
+# 	"ets.auth.validate"
 # ]
 
-
-clear_cache = "app.cache.clear_cache"
