@@ -14,14 +14,14 @@ frappe.ui.form.on("Purchase Order", {
 			frm.remove_custom_button(__('Update Items'));
 		}, 500);
 	},
-	onload: function (frm) {
-		frm.trigger("amend_po");
-		frm.remove_custom_button(__('Update Items'));
-	},
-	onload_post_render: function (frm) {
-		frm.trigger("amend_po");
-		frm.remove_custom_button(__('Update Items'));
-	},
+	// onload: function (frm) {
+	// 	frm.trigger("amend_po");
+	// 	frm.remove_custom_button(__('Update Items'));
+	// },
+	// onload_post_render: function (frm) {
+	// 	frm.trigger("amend_po");
+	// 	frm.remove_custom_button(__('Update Items'));
+	// },
 	amend_po: function (frm) {
 		var btn_avl = function (label) {
 			if (typeof label === 'string') {

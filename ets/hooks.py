@@ -8,6 +8,8 @@ app_icon = "octicon octicon-file-directory"
 app_color = "grey"
 app_email = "lovin@etsqatar.net"
 app_license = "MIT"
+# app_logo_url = '/assets/frappe/images/frappe-framework-logo.svg'
+
 fixtures = ["Custom Field", "Custom Script"]
 # Includes in <head>
 # ------------------
